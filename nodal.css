@@ -1,6 +1,23 @@
 body {
     background-color: white;
 }
+
 h1 {
     color: rgb(0, 128, 255);
+}
+
+.sidebar{
+  position: fixed;
+  left: 0; /* You can use 'right' if you want it on the right side */
+  top: 0;
+  width: 30px; /* Adjust the width as needed */
+  height: 100%; /* Make it the full height of the viewport */
+  background-color: white; /* Set background color */
+  color: black; /* Set text color */
+  padding: 20px; /* Add some padding for better readability */
+  border-right: 2px solid gray;
+}
+
+.content{
+  margin-left: 70px; /* Ensure the content doesn't overlap with the sidebar */
 }
