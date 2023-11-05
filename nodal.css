@@ -1,9 +1,11 @@
 body {
   background-color: white;
+  font-family: helvetica, sans-serif;
 }
 
 h1 {
-  color: rgb(0, 128, 255);
+  color: rgb(0, 90, 179);
+  font-weight: bold;
 }
 
 .sidebar {
@@ -18,29 +20,32 @@ h1 {
 }
 
 .sidenav {
-  height: 100%;
+  height: 30%;
   width: 0;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  border: 2px solid rgb(0, 90, 179);
 }
 
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+  font-size: 17px;
+  color: rgb(0, 90, 179);
   display: block;
   transition: 0.3s;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: lightskyblue;
 }
 
 .sidenav .closebtn {
@@ -53,15 +58,12 @@ h1 {
 
 .content {
   margin-left: 70px;
-  /* Ensure the content doesn't overlap with the sidebar */
 }
 
 .content {
   height: 1000px;
-  /* Adjust the height to make content longer than the viewport */
 }
 
-/* Custom styles for the scroll bar (optional) */
 .content {
   scrollbar-width: thin;
   scrollbar-color: #ccc #999;
@@ -88,5 +90,5 @@ h1 {
 .progress-bar {
   height: 100%;
   width: 0;
-  background-color: #4CAF50;
+  background-color: lightblue;
 }
