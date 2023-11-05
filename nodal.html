@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        html,
+        body {
+            width: 100%;
+            /* 100% of the viewport width */
+            height: 100%;
+            /* 100% of the viewport height */
+            margin-left: 1%;
+            /* Remove default margin for body */
+            padding: 0;
+            /* Remove default padding for body */
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="nodal.css">
+
+</head>
+
+<div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+</div>
+
+<div class="sidebar">
+    <img src="images/house-solid.svg" width="30" height="30" alt="home icon">
+    <br><br>
+    <span style="cursor:pointer" onclick="openNav()"><img src="images/book-solid.svg" width="30" height="30" alt="modules icon"></span>
+    <br><br>
+    <img src="images/user-solid.svg" width="30" height="30" alt="user profile">
+</div>
+
+<div class="content">
+    <h1>Nodal Analysis</h1>
+    <h2>Lesson Material</h2>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</div>
+
+<script>
+    window.onscroll = function () {
+        myFunction();
+    };
+
+    function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
+</script>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="nodal.html">Nodal Analysis</a>
+    <a href="#">Mesh Analysis</a>
+    <a href="#">Thevenin/Norton Equivalents</a>
+    <a href="#">First-Order Circuits</a>
+  </div>
+  
+  <script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "200px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+
+
+</html>

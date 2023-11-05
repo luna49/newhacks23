@@ -1,0 +1,92 @@
+body {
+  background-color: white;
+}
+
+h1 {
+  color: rgb(0, 128, 255);
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 100%;
+  color: black;
+  padding: 20px;
+  border-right: 2px solid gray;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.content {
+  margin-left: 70px;
+  /* Ensure the content doesn't overlap with the sidebar */
+}
+
+.content {
+  height: 1000px;
+  /* Adjust the height to make content longer than the viewport */
+}
+
+/* Custom styles for the scroll bar (optional) */
+.content {
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #999;
+}
+
+.content::-webkit-scrollbar {
+  width: 12px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: #999;
+}
+
+.progress-container {
+  width: 100%;
+  height: 10px;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: #4CAF50;
+}
