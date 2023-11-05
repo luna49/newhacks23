@@ -44,22 +44,24 @@
 <div class="content">
     <h2>Lesson Material</h2>
     <p1>
-        Firstly, it is important to understand what a node is. This is a confusing concept to many in the beginning, <br>
+        Firstly, it is important to understand what a node is. This is a confusing concept to many in the beginning,
+        <br>
         but it is crucial to be able to recognize the nodes of a circuit.
         <br><br>
         Kirchoff’s Current Law states that the amount of net charge in an isolated circuit will not change. <br>
-        This is useful to us, because it follows that current cannot vanish into thin air. The current going into a node <br>
-        will equal the current going out of a node, and we can use this property to solve a circuit. 
+        This is useful to us, because it follows that current cannot vanish into thin air. The current going into a node
+        <br>
+        will equal the current going out of a node, and we can use this property to solve a circuit.
     </p1>
 
     <h2>Example Question</h2>
     <ul>
-        <li> 
+        <li>
             <div class="dropdown">
-            <button class="dropbtn" id="dropdownButton">Dropdown</button>
-            <div class="dropdown-content" id="dropdownContent">
-                <p>This is the block of text that appears when the button is clicked.</p>
-            </div>
+                <button class="dropbtn" id="dropdownButton">Dropdown</button>
+                <div class="dropdown-content" id="dropdownContent">
+                    <p>This is the block of text that appears when the button is clicked.</p>
+                </div>
             </div>
         </li>
         <li>Item 2</li>
@@ -77,19 +79,19 @@
 
 <script>
     function checkGuess() {
-      const secretNumber = 5.2; // Change this to your expected input number
-      const userGuessInput = document.getElementById("userGuess");
-      const message = document.getElementById("message");
+        const secretNumber = 5.2; // Change this to your expected input number
+        const userGuessInput = document.getElementById("userGuess");
+        const message = document.getElementById("message");
 
-      const userGuess = parseFloat(userGuessInput.value);
+        const userGuess = parseFloat(userGuessInput.value);
 
-      if (isNaN(userGuess)) {
-        message.textContent = "Please enter a valid number.";
-      } else if (userGuess === secretNumber) {
-        message.textContent = "Congratulations! You guessed the correct number.";
-      } else {
-        message.textContent = "Wrong guess. Try again.";
-      }
+        if (isNaN(userGuess)) {
+            message.textContent = "Please enter a valid number.";
+        } else if (userGuess === secretNumber) {
+            message.textContent = "Congratulations! You guessed the correct number.";
+        } else {
+            message.textContent = "Wrong guess. Try again.";
+        }
     }
 </script>
 
