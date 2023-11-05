@@ -16,21 +16,25 @@
         }
     </style>
 
-  <link rel="stylesheet" type="text/css" href="nodal.css">
+    <link rel="stylesheet" type="text/css" href="nodal.css">
 
 </head>
 
-<div class="sidebar">
-  <img src="images/house-solid.svg" width="30" height="30" alt="home icon">
-  <br>
-  <br>
-  <img src="images/book-solid.svg" width="30" height="30" alt="modules icon">
-  <br>
-  <br>
-  <img src="images/user-solid.svg" width="30" height="30" alt="user profile">
+<div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
 </div>
 
-<div class = "content">
+<div class="sidebar">
+    <img src="images/house-solid.svg" width="30" height="30" alt="home icon">
+    <br>
+    <br>
+    <img src="images/book-solid.svg" width="30" height="30" alt="modules icon">
+    <br>
+    <br>
+    <img src="images/user-solid.svg" width="30" height="30" alt="user profile">
+</div>
+
+<div class="content">
     <h1>Nodal Analysis</h1>
     <h2>Lesson Material</h2>
     <ul>
@@ -39,5 +43,20 @@
         <li>Item 3</li>
     </ul>
 </div>
+
+
+<script>
+    window.onscroll = function () {
+        myFunction();
+    };
+
+    function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
+</script>
+
 
 </html>
