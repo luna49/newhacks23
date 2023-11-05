@@ -52,7 +52,14 @@
 
     <h2>Example Question</h2>
     <ul>
-        <li>Item 1</li>
+        <li> 
+            <div class="dropdown">
+            <button class="dropbtn" id="dropdownButton">Dropdown</button>
+            <div class="dropdown-content" id="dropdownContent">
+                <p>This is the block of text that appears when the button is clicked.</p>
+            </div>
+            </div>
+        </li>
         <li>Item 2</li>
         <li>Item 3</li>
     </ul>
@@ -120,5 +127,16 @@
     document.getElementById("mySidenav").style.width = "0";
   }
   </script>
+
+<script>
+    document.getElementById("dropdownButton").addEventListener("click", function () {
+        var dropdownContent = document.getElementById("dropdownContent");
+        if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+        } else {
+            dropdownContent.style.display = "block";
+        }
+    });
+</script>
 
 </html>
