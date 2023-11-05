@@ -1,0 +1,24 @@
+body {
+    background-image: url('your-image.jpg');
+    background-size: cover;
+    /* This ensures the image covers the entire viewport */
+    background-repeat: no-repeat;
+    /* Prevents image from repeating */
+}
+
+.nodal-button {
+    display: inline-block;
+    background-color: #0074d9;
+    /* Button background color */
+    color: #fff;
+    /* Text color */
+    padding: 10px 20px;
+    /* Padding around the button text */
+    border: none;
+    /* Remove border */
+    text-align: center;
+    text-decoration: none;
+    /* Remove underline */
+    border-radius: 5px;
+    /* Rounded corners */
+}
