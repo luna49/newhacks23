@@ -19,7 +19,7 @@
 </head>
 
 <div class="module-header">
-    <h1>Nodal Analysis</h1>
+    <h1>Thevenin Equivalent Circuits</h1>
 </div>
 
 <div class="progress-container">
@@ -38,17 +38,55 @@
 </div>
 
 <div class="content">
-    <h2>Lesson Material</h2>
+    <h3>What is a Thevenin Equivalent Circuit, and why do we need to know it?</h3>
     <p1>
-        Firstly, it is important to understand what a node is. This is a confusing concept to many in the beginning,
-        <br>
-        but it is crucial to be able to recognize the nodes of a circuit.
-        <br><br>
-        Kirchoff’s Current Law states that the amount of net charge in an isolated circuit will not change. <br>
-        This is useful to us, because it follows that current cannot vanish into thin air. The current going into a node
-        <br>
-        will equal the current going out of a node, and we can use this property to solve a circuit.
+        The general idea is that any linear circuit can be reduced to a single voltage source and resistor in parallel,
+        as seen from some set of ports. They are helpful for determining the overall behavior of a certain portion of a
+        larger circuit.
     </p1>
+    <br><img src="images/TheveninEquivalent-2.png" width=400px height=200px>
+    <br>
+    <h3>How do we solve for the Thevenin Equivalent?</h3>
+    <p1>
+        Depending on the type of circuit, we start by solving for either V_oc or R_th. <br><br>
+
+        When you first look at a Thevenin problem, classify the circuit as one of the following:
+        <u1>
+            <li>Case 1: The circuit contains only independent sources.<br>
+                <img src="images/independent sources.png" width=300px height=200px>
+            </li>
+            <li>Case 2: The circuit contains only dependent sources.</li>
+            <li>Case 3: The circuit contains both independent and dependent sources.</li>
+        </u1>
+    </p1>
+
+    <h3>Case 1: All-Independent Sources</h3>
+    <p1>
+        This is the simplest case. For these circuits, you can find your V_th by opening the terminals you are looking
+        at,
+        and finding the open-circuit voltage between them. Use analysis techniques like nodal or mesh to find this.
+        <br><br>
+        As for your R_th, you can find it by:
+        <ol>
+            <li>Deactivating your sources (opening current sources, shorting voltage sources)</li>
+            <li>Finding the equivalent resistance (now that there are only resistors in your circuit), with respect to
+                the same terminals</li>
+        </ol>
+    </p1>
+
+    <h3>Case 2: All-Dependent Sources</h3>
+    <p1>
+        In this case, you can solve for both V_th and R_th by placing a test source (current or voltage)
+        with a value of 1V or 1A across the terminals we are looking at. <br><br>
+        Note: the polarity of test voltage sources must match V_oc, and test current sources must flow from the
+        negative terminal to the positive terminal (orientation matters, so be careful). <br><br>
+        Then, find both the voltage and current across that test source, and use $\frac{V}{I}$ to find R_th. <br><br>
+        We can do this because the circuit contained only dependent sources. It would not have produced any
+        response unless there were other responses caused by an independent source.
+    </p1>
+
+    <h3>Case 3: A Mix of Dependent & Independent Sources</h3>
+
 
     <h2>Example Question</h2>
     <ul>
@@ -138,5 +176,17 @@
         }
     });
 </script>
+
+<script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: { inlineMath: [['$', '$'], ['\\(','\\)']] },
+      displayMath: [['$$', '$$']],
+      TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+  </script>
+
 
 </html>

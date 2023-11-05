@@ -1,0 +1,137 @@
+body {
+  background-color: white;
+  font-family: helvetica, sans-serif;
+}
+
+h1 {
+  color: rgb(0, 90, 179);
+  font-weight: bold;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 100%;
+  color: black;
+  padding: 20px;
+  border-right: 2px solid gray;
+}
+
+.sidenav {
+  height: 63%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  border: 2px solid rgb(0, 90, 179);
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: rgb(0, 90, 179);
+  display: block;
+  transition: 0.3s;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.sidenav a:hover {
+  color: lightskyblue;
+}
+
+.sidenav .closebutton {
+  position: absolute;
+  top: 10px;
+  right:10px;
+  font-size: 35px;
+  margin-left: 50px;
+}
+
+.module-header{
+  position: fixed;
+  top: 0;
+  left: 80px;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  color: #fff;
+  padding: 20px;
+  border-bottom: 2px solid gray;
+}
+
+.content {
+  margin-left: 80px;
+  padding-top: 100px; 
+}
+
+.content {
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #999;
+}
+
+.content::-webkit-scrollbar {
+  width: 12px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: #999;
+}
+
+.progress-container {
+  width: 100%;
+  height: 10px;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background-color:rgb(0, 90, 179);
+}
+
+/* Style for the dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+/* Style for the dropdown button (initially hidden text, down arrow shown) */
+.dropbtn {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  bottom: 10;
+  right: 10;
+
+}
+
+
+/* Style for the dropdown content (initially hidden) */
+
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  bottom: 20;
+  right: 20;
+
+
+}
